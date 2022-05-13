@@ -1,23 +1,37 @@
-nav
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans")
+
+*
+    margin: 0
+    padding: 0
+
+#container
+    width: 100%
     display: flexbox
-    justify-content: space-between
-    align-items: center
+
+/** HEADER */
+
+/** NAVIGATION BAR */
+nav
     overflow: hidden
     background-color: #333
     position: fixed
     top: 0
     width: 100%
-
-    ul
-        display: flex
-        align-items: center
-
-    ul li
-        list-style: none
-        margin-left: 20px
-
-        &:last-child
-            margin-right: 0px
+ul
+    text-align: center
+    list-style-type: none
+    margin: 0
+    padding: 15px
+    li
+        display: inline
+        font-family: "Fira Sans", sans-serif
+        font-size: 17px
+    a
+        color: #f2f2f2
+        text-decoration: none
+        padding: 14px
+        &:hover
+            background-color: #111
 
 main
-    display: flexbox
+    text-align: center

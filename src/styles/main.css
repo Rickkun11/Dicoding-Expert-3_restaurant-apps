@@ -1,11 +1,17 @@
-nav {
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 100%;
   display: flexbox;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+/** HEADER */
+/** NAVIGATION BAR */
+nav {
   overflow: hidden;
   background-color: #333;
   position: fixed;
@@ -13,25 +19,30 @@ nav {
   width: 100%;
 }
 
-nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+ul {
+  text-align: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 15px;
 }
 
-nav ul li {
-  list-style: none;
-  margin-left: 20px;
+ul li {
+  display: inline;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 17px;
 }
 
-nav ul li:last-child {
-  margin-right: 0px;
+ul a {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 14px;
+}
+
+ul a:hover {
+  background-color: #111;
 }
 
 main {
-  display: flexbox;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
