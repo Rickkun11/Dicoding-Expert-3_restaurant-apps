@@ -1,24 +1,23 @@
 nav
+    display: flexbox
+    justify-content: space-between
+    align-items: center
     overflow: hidden
-    backface: color #333
+    background-color: #333
     position: fixed
     top: 0
     width: 100%
+
     ul
-        text-align: center
-        text-decoration: none
-        margin: 0
-        padding: 15px
-        li
-            display: flex
-            font-family: "Fira Sans"
-            font-size: 17px
-            a
-                color: #f2f2f2
-                text-decoration: none
-                font-size: 14px
-                &:hover
-                    background-color: #111
+        display: flex
+        align-items: center
+
+    ul li
+        list-style: none
+        margin-left: 20px
+
+        &:last-child
+            margin-right: 0px
 
 main
-    padding-top: 20px
+    display: flexbox
