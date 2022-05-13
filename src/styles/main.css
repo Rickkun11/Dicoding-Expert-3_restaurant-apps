@@ -1,0 +1,38 @@
+p {
+  letter-spacing: 1px;
+}
+
+p img {
+  display: flexbox;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 3px 10px;
+  border-radius: 3px;
+  border: 2px solid #5a3410;
+}
+
+p img {
+  display: flexbox;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 3px 10px;
+  border-radius: 3px;
+  border: 2px solid #5a3410;
+}
+
+nav {
+  display: flexbox;
+}
+
+nav a:link {
+  display: flexbox;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */
