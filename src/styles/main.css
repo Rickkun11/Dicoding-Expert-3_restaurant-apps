@@ -141,5 +141,13 @@ ul {
     display: none;
   }
 }
+@media (min-width: 1000px) and (max-width: 1200px) {
+  img {
+    width: 280px;
+  }
+}
+article img {
+  width: 380px;
+}
 
 /*# sourceMappingURL=main.css.map */
