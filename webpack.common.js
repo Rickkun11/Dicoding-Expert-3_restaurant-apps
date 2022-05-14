@@ -49,7 +49,16 @@ resolve: {
           {
             loader: 'css-loader',
           },
+          {
+            loader: "resolve-url-loader"
+          },
         ],  
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        use: [
+            'file-loader',
+        ],
       },
       {
         test: /\.(s(a|c)ss)$/,
