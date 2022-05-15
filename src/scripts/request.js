@@ -1,24 +1,37 @@
 import data from '../DATA.json';
 
-let html = "";
-data.restaurants.forEach((resto) => {
-html += document.getElementById("posts").innerHTML = `
-    <article class="post-item">
-        <img class="post-item__thumbnail"
-            src="${resto.pictureId}"
-            alt="Gambar suasana restoran yang berada di ${resto.city}" 
-        />
-        <div class="city">
-            <span>${resto.city}</span>
+data.restaurants.forEach((data) => {
+
+    document.getElementById("featur").innerHTML = `
+    <div class="feature-container">
+            <img src="${data.pictureId}" alt="Flexbox Feature">
+            <h2>${data.city}</h2>
+            <p class="card-text">${data.rating}</p>
+            <p class="card-text">${data.name}</p>
+            <p class="card-text">${data.description}</p>
         </div>
-        <div class="post-item__content">
-            <p class="post-item__date">
-            Rating <a href="#" class="post-item__date__author">${resto.rating}</a>
-        </p>
-            <h1 class="post-item__title"><a href="#">${resto.name}</a></h1>
-            <p class="post-item__description">${resto.description}</p>
-        </div>
-    </article>
+    <div class="feature-container">
+        <img src="${data.pictureId}" alt="Flexbox Feature">
+        <h2>${data.city}</h2>
+        <p class="card-text">${data.rating}</p>
+        <p class="card-text">${data.name}</p>
+        <p class="card-text">${data.description}</p>
+    </div>
+    <div class="feature-container">
+        <img src="${data.pictureId}" alt="Flexbox Feature">
+        <h2>${data.city}</h2>
+        <p class="card-text">${data.rating}</p>
+        <p class="card-text">${data.name}</p>
+        <p class="card-text">${data.description}</p>
+    </div>
+    
+    <div class="feature-container">
+        <img src="${data.pictureId}" alt="Flexbox Feature">
+        <h2>${data.city}</h2>
+        <p class="card-text">${data.rating}</p>
+        <p class="card-text">${data.name}</p>
+        <p class="card-text">${data.description}</p>
+    </div>
     `;
     console.log(data);
 });

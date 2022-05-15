@@ -19,6 +19,12 @@ module.exports = {
             loader: 'sass-loader',
             test: /\.scss$/,
         },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/,
+          use: [
+              'file-loader',
+          ],
+        },
     ],
 },
 plugins: [
@@ -49,17 +55,9 @@ resolve: {
           {
             loader: 'css-loader',
           },
-          {
-            loader: "resolve-url-loader"
-          },
         ],  
       },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/,
-        use: [
-            'file-loader',
-        ],
-      },
+      
       {
         test: /\.(s(a|c)ss)$/,
         use: [
