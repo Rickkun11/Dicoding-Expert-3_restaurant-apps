@@ -145,6 +145,7 @@ main
 
 .title-content
     border-bottom: 10px solid #313131
+    text-align: center
 
 .row
     display: flex
@@ -172,6 +173,8 @@ main
         color: #FBFBFB
         font-weight: 600
         text-align: left
+        min-width: 44px
+        min-height: 44px
 
     & img
         width: 100%
@@ -189,7 +192,9 @@ main
 
     &-text
         color: #313131
-
+    &.fa-star
+        min-width: 44px
+        min-height: 44px
     & .rating
         color: #313131
         font-size: 1rem
@@ -204,8 +209,11 @@ footer
     padding: 7vh 0
 
 footer a
+    display: block
     text-decoration: none
     color: #FBFBFB
+    min-width: 44px
+    min-height: 44px
 
 footer a:hover,
 footer a:active

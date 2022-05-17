@@ -157,6 +157,7 @@ main {
 
 .title-content {
   border-bottom: 10px solid #313131;
+  text-align: center;
 }
 
 .row {
@@ -187,6 +188,8 @@ main {
   color: #FBFBFB;
   font-weight: 600;
   text-align: left;
+  min-width: 44px;
+  min-height: 44px;
 }
 .card img {
   width: 100%;
@@ -205,6 +208,10 @@ main {
 .card-text {
   color: #313131;
 }
+.card.fa-star {
+  min-width: 44px;
+  min-height: 44px;
+}
 .card .rating {
   color: #313131;
   font-size: 1rem;
@@ -221,8 +228,11 @@ footer {
 }
 
 footer a {
+  display: block;
   text-decoration: none;
   color: #FBFBFB;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 footer a:hover,
