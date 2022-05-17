@@ -1,59 +1,50 @@
-import data from '../DATA.json';
-import warung from '../DATA2.json';
-
-data.restaurants.forEach((data) => {
-
-    document.getElementById("featur").innerHTML = `
-    <div class="feature-container">
-            <img src="${data.pictureId}" alt="Flexbox Feature">
-            <h2>${data.city}</h2>
-            <p class="card-text">${data.rating}</p>
-            <p class="card-text">${data.name}</p>
-            <p class="card-text">${data.description}</p>
-        </div>
-    <div class="feature-container">
-        <img src="${data.pictureId}" alt="Flexbox Feature">
-        <h2>${data.city}</h2>
-        <p class="card-text">${data.rating}</p>
-        <p class="card-text">${data.name}</p>
-        <p class="card-text">${data.description}</p>
-    </div>
-    <div class="feature-container">
-        <img src="${data.pictureId}" alt="Flexbox Feature">
-        <h2>${data.city}</h2>
-        <p class="card-text">${data.rating}</p>
-        <p class="card-text">${data.name}</p>
-        <p class="card-text">${data.description}</p>
-    </div>
-    `;
-    console.log(data);
+import('../DATA.json').then(({
+    default: jsonData,
+}) => {
+    const restaurants = jsonData.restaurants;
+    let restoList = '';
+    restaurants.forEach((data_resto) => {
+        restoList +=
+            `
+                <div class="col">
+                    <div class="card">
+                        <div class="card-img">
+                            <div class="city-label">
+                                <span class="city-label-text">
+                                    Kota ${data_resto.city}
+                                </span>
+                            </div>
+                            <img src="${data_resto.pictureId}" alt="Gambar makanan ${data_resto.name}">
+                        </div>
+                        <div class="card-body">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <span>${data_resto.rating}</span>
+                            </div>
+                            <h3 class="card-title">
+                                <a href="./restaurant/${data_resto.id}" title="Link ke halaman detail makanan">${data_resto.name}</a>
+                            </h3>
+                            <p class="card-text">${data_resto.description}</p>
+                        </div>
+                    </div>
+                </div>
+                `;
+    });
+    document.querySelector('#resto-list').innerHTML = restoList;
 });
 
 
-warung.warung.forEach((data) => {
-
-    document.getElementById("featur2").innerHTML = `
-    <div class="feature-container">
-            <p class="card-text">${data.id}</p>
-            <h2>${data.title}</h2>
-            <p class="card-text">${data.time}</p>
-            <p class="card-text">${data.servings}</p>
-            <p class="card-text">${data.difficulty}</p>
-    </div>
-    <div class="feature-container">
-            <p class="card-text">${data.id}</p>
-            <h2>${data.title}</h2>
-            <p class="card-text">${data.time}</p>
-            <p class="card-text">${data.servings}</p>
-            <p class="card-text">${data.difficulty}</p>
-    </div>
-    <div class="feature-container">
-            <p class="card-text">${data.id}</p>
-            <h2>${data.title}</h2>
-            <p class="card-text">${data.time}</p>
-            <p class="card-text">${data.servings}</p>
-            <p class="card-text">${data.difficulty}</p>
-    </div>
-    `;
-    console.log(data);
+const nav = document.querySelector("#nav");
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    if (scrollY < 20) {
+        nav.classList.remove("shadow-bottom");
+    } else {
+        nav.classList.add("shadow-bottom");
+    }
+});
+const menu = document.querySelector(".menu");
+const menuButton = document.querySelector(".menu-button");
+menuButton.addEventListener("click", () => {
+    menu.classList.toggle("open");
 });

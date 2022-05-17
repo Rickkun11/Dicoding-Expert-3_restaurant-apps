@@ -5,52 +5,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DRestaureant</title>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
-
 <body>
-    <a href="#featur" class="skip-link">Skip To Content</a>
-    <div class="header">
-        <header>
-
+    <a href="#content" class="skip-link">SKIP TO CONTENT</a>
+    <header>
+        <nav id="nav" class="menu">
             <h1>DRestaureant</h1>
-
-            <nav id="menu" role="navigation">
-                <ul>
-
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="#">Favorite</a></li>
-                    <li><a href="http://github.com/Rickkun11/">About Us</a></li>
-                </ul>
-            </nav>
-
-            <button class="menu-link">
-                <a class="icon"></a>
+            <button class="menu-button" title="off Hamburger Button" aria-label="off Hamburger Button">
+                <i class="fas fa-times"></i>
+                <i class="fas fa-bars"></i>
             </button>
+            <ul class="menu-list">
+                <li><a href="/" title="Link home">Home</a></li>
+                <li><a href="#" title="Link favorite">Favorite</a></li>
+                <li><a href="http://github.com/Rickkun11" target="_blank">About Me</a></li>
+            </ul>
+        </nav>
 
-        </header>
-    </div>
-    <section class="headline"
-        style="background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.7)), url('./images/heros/hero-image_2.jpg')">
-        <h1>DRestaureant History Of 5 Ratings Restaurant In The world</h1>
-        <p>Show More in bellow on page</p>
-    </section>
+        <!-- Hero -->
+        <div class="hero">
+            <img src="./images/heros/hero-image_2.jpg" alt="Gambar hero">
+            <div class="inner">
+                <h1 class="title">DRestaureant</h1>
+                <p class="subtitle">
+                    DRestaureant History Of 5 Ratings Restaurant In The world
+                </p>
+            </div>
+        </div>
 
-    <!--Data JSON-->
-    <section class="features" id="featur"></section>
-    <section class="headline"
-        style="background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.7)), url('./images/heros/hero-image_4.jpg')">
-        <h1>Warung In Indonesia Top 5 in this year</h1>
-        <p>Show More in bellow on page</p>
-    </section>
+    </header>
+    <main>
+        <div id="content">
+            <section>
+                <h2><span class="title-content">Explore Restaurant</span></h2>
 
-    <section class="features" id="featur2"></section>
+                <!--data JSON-->
+                <div class="row" id="resto-list">
 
+                </div>
+            </section>
+        </div>
+    </main>
     <footer>
-        <ul>
-            <li><a href="#">Copyright © 2022 - Restaureant Apps</a></li>
-        </ul>
+        <a>&copy; Copyright 2022 &dash; Rickkun11</a>
     </footer>
 </body>
 
