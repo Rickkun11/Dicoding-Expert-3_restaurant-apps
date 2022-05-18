@@ -5,13 +5,10 @@
         "es2021": true
     },
     "extends": [
-        "google"
+        "airbnb-base"
     ],
-    "ecmaVersion": 12,
-    "parser": "babel-eslint",
     "parserOptions": {
-        "sourceType": "module",
-        "allowImportExportEverywhere": true
+        "ecmaVersion": "latest"
     },
     "rules": {
     }

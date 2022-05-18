@@ -1,0 +1,18 @@
+footer {
+  height: $footer__height;
+  background-color: $dark-color;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  color: $light-color;
+  margin-top: 56px;
+  gap: 16px;
+  font-size: 0.9em;
+}
+
+footer a {
+
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+}

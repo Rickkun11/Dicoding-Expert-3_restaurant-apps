@@ -1,3 +1,22 @@
-import 'regenerator-runtime'; /* for async await transpile */
-import('../styles/main.css');
-import('../scripts/request.js');
+/* eslint-disable import/no-absolute-path */
+import 'regenerator-runtime';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+import '../styles/style.scss';
+import './view/components';
+import App from './view/app';
+import { swRegister, getElement } from './helper';
+
+const app = new App({
+  appBar: getElement('app-bar'),
+  contentContainer: getElement('#content'),
+});
+
+window.addEventListener('load', () => {
+  app.renderContent();
+  swRegister();
+});
+
+window.addEventListener('hashchange', () => {
+  app.renderContent();
+});

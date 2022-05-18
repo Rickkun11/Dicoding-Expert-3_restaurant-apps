@@ -7,12 +7,12 @@ module.exports = merge(common, {
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
   },
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'public'),
-    },
-
-    compress: true,
-    port: 8080, // default 8080
+  module: {
+    rules: [
+      {
+        test: /\.s[ac]ss$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
   },
 });
