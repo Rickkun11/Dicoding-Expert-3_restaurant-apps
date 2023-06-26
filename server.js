@@ -15,6 +15,3 @@ app.get('/', (request, response) => {
 
 // listen for requests :)
 // eslint-disable-next-line no-unused-vars
-const listener = app.listen(PORT, () => {
-  console.log(`Your app is listening on port ${PORT}`);
-});
