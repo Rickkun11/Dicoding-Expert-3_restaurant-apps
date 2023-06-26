@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start-dev": "webpack serve --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js && serve -s dist",
+    "build": "webpack --config webpack.prod.js && node server.js",
     "start-prod": "node server.js",
     "lint": "eslint ./src",
     "test": "karma start",
